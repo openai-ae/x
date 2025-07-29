@@ -44,7 +44,7 @@ jobs:
         echo "deb-src http://deb.debian.org/debian bookworm main contrib non-free" | tee -a /etc/apt/sources.list
         apt update && apt build-dep apt -y
         mkdir -p buildpkg mkdir -p buildpkg_tp
-        autoreconf -fiv
+        #autoreconf -fiv
         ./configure
         make pkg_all
         make image-iso
